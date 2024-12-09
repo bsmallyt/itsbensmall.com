@@ -1,0 +1,1 @@
+powershell.exe -noexit 'C:\Users\yapiz\itsbensmall\itsbensmall\bensite_scripts\up.ps1'

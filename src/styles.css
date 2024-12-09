@@ -1,0 +1,43 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Comic Sans MS", "Comic Sans";
+  position: relative; 
+}
+
+body::before {
+  content: "";
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  background-image: url('https://imagedelivery.net/JFKtCgwTPfudztWkJA41Xw/6cd67f46-61d6-49c9-b3f9-68f149e7c800/public');
+  background-size: cover;
+  background-position: center 50px;
+  background-attachment: fixed;
+
+
+  filter: blur(5px);
+  z-index: -1;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.mat-mdc-tab-header {
+  background: #faf9fd;
+}
+.mat-mdc-tab-body-content {
+  overflow-x: hidden !important;
+}

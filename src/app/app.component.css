@@ -1,0 +1,181 @@
+.text {
+  font-family: "Comic Sans MS", "Comic Sans";
+  font-size: 16px;
+  color: black;
+}
+.text-block {
+  justify-content: center;
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.base {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.base-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.base-span {
+  height: 49px;
+}
+
+
+mat-toolbar {
+  position: fixed;
+  height: 64px;
+  z-index: 2;
+}
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+.toolbar-text {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  color: black;
+}
+.toolbar-title-button {
+  border: none;
+  background-color: inherit;
+  font-size: 20px;
+}
+.toolbar-title-button:hover {
+  text-decoration-line: underline;
+  text-decoration-color: black;
+}
+.toolbar-icon {
+  color: red;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toolbar-icon-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toolbar-icon-button:hover{
+  text-transform: uppercase;
+}
+
+.toolbar-spacer {
+  height: 64px;
+}
+
+.menu-icon-div {
+  width: 155px;
+  flex-grow: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+.menu-icon {
+  flex: 1;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: red;
+  justify-content: left;
+}
+.menu-span {
+  flex: 4;
+}
+
+
+.main-span {
+  height: 100px;
+}
+.main-contents {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.main-contents-div {
+  flex: 1;
+  text-align: center;
+
+}
+.main-contents-button {
+  background-color: transparent;
+  border: none;
+  min-width: 325px;
+}
+.main-contents-img {
+  width: 75%;
+
+  border: solid;
+  border-radius: 25px;
+  border-color: black;
+}
+.main-contents-img:hover {
+  border-color: red;
+}
+.main-contents-text {
+  font-size: 25px;
+  font-weight: bold;
+}
+.vid-block {
+  background-color: white;
+}
+.vid-text {
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+app-youtube {
+  display: inline-flex;
+}
+
+
+.about-content {
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.about-content-img {
+  display: flex;
+  flex: 4;
+  min-width: 325px;
+  
+  justify-content: center;
+  align-items: center;
+}
+.about-content-text {
+  padding: 0px;
+  min-width: 325px;
+  flex: 8;
+
+  display: flex;
+}
+.about-text {
+  width: 80%;
+
+
+}
+.about-img {
+  display: flex;
+  width: 80%;
+
+  border: solid;
+  border-radius: 25px;
+  border-color: black;
+}
+.about-span {
+  height: 49px;
+}
+
+
+.spacer {
+  height: 500px;
+}

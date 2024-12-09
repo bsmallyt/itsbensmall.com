@@ -1,0 +1,162 @@
+<mat-toolbar>
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="toolbar-icon-button" title="menu">
+    <div class="toolbar-icon-div">
+      <i class="fa-solid fa-bars toolbar-icon"></i>
+    </div>
+  </button>
+  <button (click)="toggle('home'); togglescroll('on')" class="toolbar-title-button">
+    <span class="toolbar-text">itsbensmall</span>
+  </button>
+  <span class="toolbar-spacer"></span>
+  <button mat-icon-button (click)="toggle('projects'); togglescroll('off')" class="toolbar-icon-button" title="projects" >
+    <div class="toolbar-icon-div">
+      <i class="fa-solid fa-code toolbar-icon"></i>
+    </div>
+  </button>
+  <button mat-icon-button (click)="toggle('redcube'); togglescroll('off')" class="toolbar-icon-button" title="redcube">
+    <div class="toolbar-icon-div">
+      <i class="fa-solid fa-cube toolbar-icon"></i>
+    </div>
+  </button>
+</mat-toolbar>
+
+<div class="toolbar-spacer"></div>
+
+<!--for the Menu selector section-->
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="toggle('about_me'); togglescroll('on')">
+    <div class="mat-mdc-menu-item menu-icon-div">
+      <i class="fa-solid fa-film menu-icon"></i>
+      <span class="menu-span text">its me</span>
+    </div>
+  </button>
+  <button mat-menu-item (click)="toggle('projects'); togglescroll('off')">
+    <div class="mat-mdc-menu-item menu-icon-div">
+      <i class="fa-solid fa-code menu-icon"></i>
+      <span class="menu-span text">projects</span>
+    </div>
+  </button>
+  <button mat-menu-item (click)="toggle('redcube'); togglescroll('off')">
+    <div class="mat-mdc-menu-item menu-icon-div">
+      <i class="fa-solid fa-cube menu-icon"></i>
+      <span class="menu-span text">games</span>
+    </div>
+  </button>
+  <button mat-menu-item (click)="toggle('contact_me'); togglescroll('off')" disabled>
+    <div class="mat-mdc-menu-item menu-icon-div">
+      <i class="fa-solid fa-mobile-screen menu-icon"></i>
+      <span class="menu-span text">contact me</span>
+    </div>
+  </button>
+</mat-menu>
+
+
+
+<!-- For main menu-->
+<div *ngIf="display['home']" class="base">
+  <div class="base-content">
+    <div class="base-span mat-tab"></div>
+    <div class="text-block">
+      <p class="text vid-text">Hey! It's me, Benjamin Small. These are some of my treasured moments</p>
+    </div>
+    <app-img></app-img>
+    <div class="main-span"></div>
+
+    <div class="text-block">
+      <p class="text vid-text">Learn more about me and what I do</p>
+    </div>
+    <div class="main-contents">
+      <div class="main-contents-div">
+        <button class="main-contents-button" (click)="toggle('about_me'); togglescroll('on')">
+          <img src="https://imagedelivery.net/JFKtCgwTPfudztWkJA41Xw/99a5afcc-fef6-4f55-2909-835fbf9bd000/public" class="main-contents-img">
+        </button>
+        <p class="text main-contents-text">about me</p>
+      </div>
+      <div class="main-contents-div">
+        <button class="main-contents-button" (click)="toggle('projects'); togglescroll('off')">
+          <img src="https://imagedelivery.net/JFKtCgwTPfudztWkJA41Xw/84ce4653-06d1-4a88-2c2d-cba59502cf00/public" class="main-contents-img">
+        </button>
+        <p class="text main-contents-text">projects</p>
+      </div>
+    </div>
+    <div class="main-span"></div>
+
+    <div class="text-block">
+      <p class="text vid-text">Below are some of my favorite youtube videos that I've made with the help of my friends</p>
+    </div>
+    <app-youtube [vidId]="ytVids['thanks']"></app-youtube>
+    <div class="base-span"></div>
+    <app-youtube [vidId]="ytVids['jdsfood']"></app-youtube>
+    <div class="main-span"></div>
+
+    <div class="text-block">
+      <p class="text vid-text">Don't forget to check out falling red cube</p>
+    </div>
+    <div class="main-contents-div">
+      <button class="main-contents-button" (click)="toggle('redcube'); togglescroll('off')">
+        <img src="https://imagedelivery.net/JFKtCgwTPfudztWkJA41Xw/ef6ea12b-7f49-4c5f-dec2-460a3e17a700/public" class="main-contents-img">
+      </button>
+      <p class="text main-contents-text">redcube</p>
+    </div>
+    <div class="main-span"></div>
+    
+  </div>
+</div>
+
+
+
+<!--for the Projects section-->
+<mat-tab-group *ngIf="display['projects'] || display['redcube'] || display['about_me']">
+  
+  <div class="tabs text">
+    <mat-tab *ngIf="display['about_me']">
+      <div class="labels">
+        <ng-template mat-tab-label>
+          <span class="text">it's me</span>
+        </ng-template>
+      </div>
+
+      <div class="about-span"></div>
+      <div class="about-content">
+        <div class="about-content-img">
+          <img class="about-img" src="https://imagedelivery.net/JFKtCgwTPfudztWkJA41Xw/443a76c4-1d41-4c39-5bda-412524576e00/public">
+        </div>
+        <div class="about-content-text text-block">
+          <p class="text about-text">
+            If you don't know me, I'm Ben. A student at SIUE studying Computer Science with a minor in Mathematics and Mass Communication.
+            Growing up I had always 
+          </p>
+        </div>
+      </div>
+
+    </mat-tab>
+
+
+    <mat-tab *ngIf="display['projects']">
+      <ng-template mat-tab-label>
+        <span class="text">webscrapper</span>
+      </ng-template>
+    </mat-tab>
+    <mat-tab *ngIf="display['projects']">
+      <ng-template mat-tab-label>
+        <span class="text">this website</span>
+      </ng-template>
+    </mat-tab>
+    <mat-tab *ngIf="display['projects']">
+      <ng-template mat-tab-label>
+        <span class="text">phi3 chat</span>
+      </ng-template>
+    </mat-tab>
+
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <span class="text">redcube</span>
+      </ng-template>
+      <app-game></app-game>
+    </mat-tab>
+  </div>
+</mat-tab-group>
+
+
+
